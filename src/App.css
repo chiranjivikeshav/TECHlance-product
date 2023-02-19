@@ -1,0 +1,785 @@
+/* ...........THIS @media IS FOR CHANGING THE FILE FOR LARGE SCREEN VEIW AND SMALL SCREEN VEIW .......... */
+@media only screen and (min-width:900px){
+  .Laptop{
+    display: block;
+  }
+  .Mobile{
+    display: none;
+  }
+}
+@media only screen and (max-width:900px){
+  .Laptop{
+    display: none;
+  }
+  .Mobile{
+    display: block;
+  }
+}
+/* .......THIS CSS IS FOR TOP OF THE WEBSITE WHICH CONTAINS  A LOGO ,LOGIN BUTTON ,MODE CHANGE BUTTON,SEARCHBAR AND SOME ICONS........ */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body {font-family: Verdana, Geneva, Tahoma, sans-serif;}
+a {text-decoration: none;}
+li {list-style: none;}
+.navbar {
+  display: flex;
+  flex-flow: row ;
+  flex-wrap: wrap ;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px;
+  z-index: 4;
+}
+.iconbox{
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+.mycart{
+  font-size: 20px;
+  margin: 0pcx 0px 2px 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 0px;
+}
+.mynotification{
+  font-size: 20px;
+  margin-left:2px;
+  padding: 0px 0 8px 8px;
+  margin-top: 0px;
+}
+.logobox{
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+}
+.logopic img {
+  width: 50px;
+  height: 50px;
+  margin-left: 4px;
+  margin-top: 4px;
+}
+.logo {
+  padding-left: 0px;
+  font-size: 23px;
+  margin-top: 12px;
+}
+.login {
+  margin-top: 0px;
+  margin-right: 3px;
+  border-style: 2px solid rgb(100, 195, 236);
+  justify-content: center;
+}
+.login-button {
+  width: 60px;
+  height: 30px;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 17px;
+  padding: 2px;
+}
+/* ***************************LOGIN PAGE CSS STARTED************************* */
+.Login-page {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;top: 0;
+  width: 100%;height: 100%;
+  overflow: auto;
+  padding-top: 60px;
+  background-color: #3a0fe8;
+  border-radius: 9px;
+}
+form.Login-page-content.animate{
+  background-color: rgb(20, 220, 187);
+  display: flex;
+  flex-flow: column;
+  flex-grow: 4;
+  align-items: center;
+  width: 350px;
+  padding-top:20px;
+  padding-bottom: 20px;
+  border-radius: 12px;
+}
+.Login-page-box{
+  background-color: black;
+  color: white;
+  height: 280px;
+  width: 230px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 30px;
+}
+.Login-page-box input{
+  width: 170px;
+  margin-bottom: 22px;
+}
+.Login-page-content {
+  background-color: #fefefe;
+  margin: 5px auto;
+  border: 1px solid #888;
+  width: 80%;
+}
+/* The Close Button */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to { transform: scale(1)}
+}
+
+/* ***************************LOGIN PAGE CSS ENDED**************************** */
+.fa{color:black; margin:2px}
+.searchbox{ padding: 0px 0px 3px 2px;}
+.searchbox .fa {
+  font-size: 20px;
+  margin-right: 5px;
+  border: 1px solid black;
+  padding: 7px;
+  border-radius: 7px;
+}
+.searchbox input {
+  margin: 0px 0px 0px 0px;
+  height: 35px;
+  width: 200px;
+  border-radius: 7px;
+  border-style: none;
+  background-color: rgb(245, 249, 253);
+  text-align: center;
+}
+
+/* ........this navbar is second navbar which contains various link and category of product........ */
+.ListNavbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px;
+  border-bottom: 1px solid black;
+}
+.ListNavbar-link a {color:black;}
+.ListNavbar-menu{
+display: flex;
+gap: 1em;
+font-size: 15px;
+}
+.ListNavbar-menu li:hover {
+background-color: #cbdaf4;
+border-radius: 5px;
+transition: 0.3s ease;
+}
+.ListNavbar-menu li {padding: 5px 14px;}
+.ListNavbar-link-box {position: relative;}
+.dropdown {
+background-color: rgb(209, 212, 212);
+padding: 1em 0;
+position: absolute;
+display: none;
+top: 35px;
+z-index: 1;
+}
+.dropdown li+li {margin-top: 10px;}
+.dropdown li {
+padding: 0.5em 1em;
+width: 8em;
+text-align: center;
+}
+.dropdown li:hover {background-color: #dae3e3;}
+.ListNavbar-link-box:hover .dropdown {display: block;}
+input[type=checkbox] {display: none;}
+.hamburger {
+display: none;
+font-size: 24px;
+user-select: none;
+}
+@media (max-width: 981px) {
+.ListNavbar-menu {
+  display: none;
+  position: absolute;
+  background-color: rgb(234, 243, 243);
+  right: 0;
+  left: 0;
+  text-align: center;
+  padding: 16px 0;
+  z-index: 1;
+}
+.ListNavbar-menu li:hover {
+  display: inline-block;
+  background-color: #4c9e9e;
+  transition: 0.3s ease;
+}
+.ListNavbar-menu li+li {margin-top: 12px;}
+input[type=checkbox]:checked~.ListNavbar-menu {display: block;}
+.hamburger {display: block;}
+.dropdown {
+  left: 50%;
+  top: 30px;
+  transform: translateX(35%);
+}
+.dropdown li:hover {background-color:#4c9e9e;}}
+/* ...............CSS FOR CAROUSEL WHICH CONTAIN THREE IMAGES ............ */
+.SliderBox {
+  width: 100%;
+  height: 255px;
+  margin: 0px;
+  z-index: 1;
+}
+@media(max-width:900px){
+  .SliderBox{
+    margin-bottom: 0;
+  height:200px;
+  }
+}
+/* ...........this CSS for the product and its various details.In this section four parts are given......
+ SECTION-1........ IMAGE OF PRODUCT............
+ SECTION-2........ PRODUCT BASIC DETAILS............
+ SECTION-3........ ADDITIONAL ITEMS WITH PRODUCT............
+ SECTION-4........ OTHER DETAILS OF PRODUCT............*/
+.product--detail{
+  height: auto;
+  width: auto;background-color: greenyellow;
+  margin: 0;
+}
+.Main-Body-Product-Details {
+  display: grid;
+  grid-template-columns: 4fr 13fr;
+  grid-template-rows: 1.6fr 3.1fr;
+  height: auto;
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  z-index: 0;
+}
+/* .....SECTION 1....... */
+.Product-Image {
+  background-color: white;
+  margin: 15px;
+  height: auto;
+  width: auto;
+  border: 1px solid rgb(225, 201, 201);
+  box-shadow: 3px 0px 10px rgb(67, 62, 62);
+}
+.Product-Image img {
+  width: auto;
+  height: 400px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.Product-Image .ADDtoCart-and-BuyNow{
+  display: grid;
+  grid-gap:8px;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 20px  20px  20px ;
+  padding: 4px;
+}
+.Product-Image .ADDtoCart-and-BuyNow i{
+  font-size: 21px;
+  margin: 5px;
+}
+.Product-Image .ADDtoCart-and-BuyNow button{
+  width:100%;
+  height: 50px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  border-style: none;
+  background-color: rgb(230, 212, 22);
+}
+/* ......SECTION 2........ */
+.Product-basic-details {
+  height: auto;
+  width: auto;
+  padding-left: 30px;
+  margin: 13px;
+  border: 1px solid rgb(195, 186, 186);
+}
+.Product-basic-details ul li {
+  margin-bottom: 0;
+  list-style: none;
+  margin-left: 0;
+}
+.Product-basic-details ul li img{
+  width:55px;
+  height:100px;
+  padding: 8px;
+}
+.Product-basic-details ul li ul li {
+  margin-bottom: 0;
+  list-style: disc;
+  margin-top: 7px;
+  margin-left: 50px;
+}
+.Product-basic-details .Rating-Button {
+  height: 22px;
+  width: 60px;
+  background-color: green;
+  color: white;
+  border-radius: 2px;
+  padding-left: 4px;
+}
+/* ......SECTION 3....... */
+.Additional-Items-With-Product {
+  background-color: white;
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-flow: column;
+  margin: 15px;
+}
+.Additional-Items-With-Product .Title {
+  padding-left: 12px;
+  font-size: 23px;
+}
+.Additional-Items-With-Product .with-Product {
+  box-shadow: 3px 0px 10px rgb(67, 62, 62);
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  margin: 20px;
+  place-items: center;
+}
+.Additional-Items-With-Product .with-Product img {
+  width: 70px;
+  height: 130px;
+  margin-top: 10px;
+}
+.Additional-Items-With-Product .with-Product .Additional-Item-Details {
+  height: 100px;
+  color: rgb(12, 11, 11);
+  font-size: 13px;
+  margin-left: 10px;
+}
+/* .......SECTION 4........ */
+.Review-of-product {
+  margin: 8px;
+  height:auto;
+  width: auto;
+  border: 1px solid rgb(220, 217, 217);
+}
+.Review-of-product ul li {
+  margin: 20px;
+  list-style: none;
+}
+.Review-of-product ul li ul li {
+  list-style: disc;
+  margin: 6px;
+}
+.Review-of-product ul li .product-color-storage {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  padding-right: 10px;margin-left: 40px;
+}
+.Review-of-product .product-color-storage .product-color {
+  display: flex;
+  flex-flow: row;
+  margin-right: 40px;
+}
+.Review-of-product .product-color-storage .product-color .product-color-img {
+  width: 60px;
+  height: auto;
+  padding-left: 10px;
+  border: 2px solid rgb(109, 221, 228);
+  margin-left: 65px;
+  margin-bottom: 7px;
+}
+.Review-of-product .product-color-storage .product-color .product-color-img img {
+  width: 40px;
+  height: auto;
+  margin-top: 3px;
+  padding-left:0px;
+}
+.Review-of-product .product-color-storage .product-storage {
+  display: flex;
+  flex-flow: row;
+  margin-right: 40px;
+}
+.Review-of-product .product-color-storage .product-storage .product-storage-inGB {
+  width: 67px;
+  height: 27px;
+  border: 2px solid rgb(109, 221, 228);
+  margin-left: 50px;
+}
+.Review-of-product .product-color-storage .product-RAM {
+  display: flex;
+  flex-flow: row;
+  margin-right: 40px;
+  margin-top: 7px;
+}
+.Review-of-product .product-color-storage .product-RAM .product-RAM-inGB {
+  width: 45px;
+  height: 27px;
+  border: 2px solid rgb(109, 221, 228);
+  margin-left: 73px;
+}
+.Review-of-product .product-discription {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  margin: 10px;
+}
+.Review-of-product .product-discription h5{font-weight: 540;}
+.Review-of-product .product-discription .product-discription-box-type1 {
+  grid-gap: 10px;
+  margin-right: 20px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  font-size: small;
+}
+.Review-of-product .product-discription .product-discription-box-type2 {
+  grid-gap: 10px;
+  margin-right: 20px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  font-size:small;
+}
+
+/* ...........**FOR MOBILE AND TABLET SCREEN***.................
+.............   this CSS for the product and its various details.In this section four parts are given......
+ SECTION-1........ IMAGE OF PRODUCT............
+ SECTION-2........ PRODUCT INITIAL DETAILS (different color ,storage and RAM)............
+ SECTION-3........ ADDITIONAL ITEMS WITH PRODUCT............
+ SECTION-4........ OTHER DETAILS OF PRODUCT............
+ SECTION-5........ DESCRIPTION OF PRODUCT............*/
+
+.Product-details-For-Mobile {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* ..........................................SECTION-1................................................... */
+.ForMobile-Product-Image {
+  background-color: white;
+  margin: 0px 15px 15px 15px;
+  height: auto;
+  width: auto;
+  box-shadow: 3px 3px 8px rgb(67, 62, 62);
+  display: grid;
+  place-items: center;
+}
+.ForMobile-Product-Image img {
+  width: auto;
+  height: 380px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.ForMobile-Product-Image .ADDtoCart-and-BuyNow {
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 20px 20px 20px;
+  padding: 4px;
+}
+.ForMobile-Product-Image .ADDtoCart-and-BuyNow i {
+  font-size: 21px;
+  margin: 5px;
+}
+.ForMobile-Product-Image .ADDtoCart-and-BuyNow button {
+  width: 100%;
+  height: 50px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  border-style: none;
+  background-color: rgb(230, 212, 22);
+}
+/* ..................................................SECTION-2............................................. */
+.ForMobile-product-color-storage {
+  box-shadow: 3px 0px 10px rgb(67, 62, 62);
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: center;
+  border: 1px solid rgb(250, 227, 227);
+  margin: 15px;
+}
+.ForMobile-product-color-storage .product-color {
+  display: flex;
+  flex-flow: row;
+  margin: 10px;
+}
+.ForMobile-product-color-storage .product-color .product-color-img {
+  width: 60px;
+  height: auto;
+  padding-left: 20px;
+  border: 2px solid rgb(7, 224, 239);
+  margin-left: 50px;
+  margin-bottom: 7px;
+}
+.ForMobile-product-color-storage .product-color .product-color-img img {
+  width: 20px;
+  height: auto;
+  margin-top: 3px;
+}
+.ForMobile-product-color-storage .product-storage {
+  display: flex;
+  flex-flow: row;
+  margin: 10px;
+}
+.ForMobile-product-color-storage .product-storage .product-storage-inGB {
+  width: 60px;
+  height: 27px;
+  padding-top: 4px;
+  border: 2px solid rgb(109, 221, 228);
+  margin: 0 10px 0 40px
+}
+.ForMobile-product-color-storage .product-RAM {
+  display: flex;
+  flex-flow: row;
+  margin: 10px;
+}
+.ForMobile-product-color-storage .product-RAM .product-RAM-inGB {
+  width: 60px;
+  height: 27px;
+  padding-top: 4px;
+  border: 2px solid rgb(109, 221, 228);
+  margin: 0 0 0 55px
+}
+/* ...........................................SECTION-3............................................. */
+
+.ForMobile-Product-basic-details {
+  height: auto;
+  width: auto;
+  margin: 20px;
+}
+.ForMobile-Product-basic-details .Rating-Button {
+  height: 22px;
+  width: 60px;
+  background-color: green;
+  color: white;
+  border-radius: 2px;
+  padding-left: 4px;
+}
+.ForMobile-Product-basic-details ul li {
+  margin: 20px;
+  list-style: none;
+  margin-left: 0;
+}
+.Product-details-For-Mobile .Available-Offer{
+  margin: 20px;
+}
+.Product-details-For-Mobile .Available-Offer ul li {
+  padding-bottom: 20px;
+  list-style: none;
+}
+.Product-OtherPart-Image {
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  place-items: center;
+  box-shadow: 3px 0px 10px rgb(67, 62, 62);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.Product-OtherPart-Image img {
+  width: 55px;
+  height: 110px;
+}
+.Product-HighLights {
+  margin-left: 35px;
+}
+.Product-HighLights ul li {
+  padding-bottom: 10px;
+}
+/* ...........................................SECTION-4............................................. */
+.Additional-Items-With-Product {
+  background-color: white;
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-flow: column;
+  margin: 15px;
+}
+.Additional-Items-With-Product .Title {
+  padding-left: 12px;
+  font-size: 23px;
+}
+.Additional-Items-With-Product .with-Product {
+  box-shadow: 3px 0px 10px rgb(67, 62, 62);
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  margin: 10px;
+  place-items: center;
+}
+.Additional-Items-With-Product .with-Product img {
+  width: 70px;
+  height: 130px;
+  margin-top: 10px;
+}
+.Additional-Items-With-Product .with-Product .Additional-Item-Details {
+  height: 130px;
+  color: rgb(12, 11, 11);
+  font-size: 11px;
+  margin-left: 10px;
+}
+/* ...........................................SECTION-5............................................. */
+.ForMobile-Product-Discription{
+  margin:10px;
+}
+.ForMobile-Product-Discription-card{
+  padding:10px;
+}
+
+/* .................MODE CHANGE BUTTON CSS............................. */
+.modebuttonbox {
+  width: 60px;
+  height: 30px;
+  border-radius: 7px;
+  border: 1px solid black;
+  background-color: black;
+  padding: 2px;
+  color: white;
+}
+.modebuttonbox:hover {
+  background-color: #4594ee;
+}
+
+
+
+/*............................SOCIAL MEDIA BUTTON............................... */
+ul{
+  margin: 0;
+  padding-left: 0px;
+}
+.socialbox {
+  position: fixed;
+  width: 40px;
+  margin-top: 10px;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .4);
+  z-index: 100;
+}
+.socialbox li {
+  height: 40px;
+  position: relative;
+}
+.socialbox li a {
+  color: black;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+  padding-left: 25%;
+  border-bottom: 1px solid rgba(0, 0, 0, .4);
+  transition: all .3s linear;
+}
+.socialbox li:nth-child(1) {
+  background: #4267B2;
+  margin: 0;
+}
+.socialbox li:nth-child(2) {
+  background: #1DA1F2;
+  margin: 0;
+}
+.socialbox li:nth-child(3) {
+  background: #E1306C;
+  margin: 0;
+}
+.socialbox li:nth-child(4) {
+  background: #2867B2;
+  margin: 0;
+}
+.socialbox li a i {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 27px;
+}
+.socialbox li a span {
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: none;
+}
+.socialbox li:hover {
+  z-index: 2;
+  width: 170px;
+  border-bottom: 1px solid rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, .4);
+}
+.socialbox li a:hover span {
+  display: block;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+/* ....................................FOOTER PART OF WEBSITE .................................. */
+footer{
+  display:flex;
+  flex-flow: column;
+  background-color: black;
+  align-items: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.importantLinkBox{
+   display: flex;
+   flex-flow: row;
+   flex-wrap: wrap;
+   font-size: 13px;
+   margin: 30px;
+}
+.importantLink{
+   margin:2px 10px 4px 5px ;
+   height: 100px;
+   width: 120px;
+   border-bottom: 1px solid white;
+}
+.importantLink ul{
+   list-style: none;
+}
+.importantLink ul a{
+   text-decoration: none;
+   color: white;
+}
+.yourEmail{
+   height: 60px;
+   justify-content: space-between;
+   padding: 10px;
+}
+.yourEmail input{
+   height: 30px;
+   width: 200px;
+   margin-right: 5px;
+   justify-content: space-between;
+   border-style: none;
+   border-radius: 4px;
+   background-color: rgb(85, 79, 79);
+   color:white;
+}
+.yourEmail button{
+   height: 30px;
+   width: 60px;
+   background-color: rgb(204, 224, 224);
+   justify-content: space-between;
+   border-style: none;
+   border-radius: 4px;
+}
+
